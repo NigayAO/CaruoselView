@@ -25,7 +25,6 @@ struct Home: View {
             //MARK: - Custom Carousel
             CustomCarouselView(index: $currentIndex, items: movies, cardPadding: 150, id: \.id) { movie, cardSize in
                 //MARK: - Custom Cell view
-//                Text(movie.name)
                 Image(movie.poster)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -41,6 +40,12 @@ struct Home: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background {
             GeometryReader { geometry in
+                let size = geometry.size
+                VisibleView(currentElement: $currentIndex, movies: movies, size: size)
+                
+                Rectangle()
+                    .fill(.ultraThinMaterial)
+                
                 LinearGradient(colors: [
                     .clear,
                     .gray,

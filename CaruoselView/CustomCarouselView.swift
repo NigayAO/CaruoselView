@@ -47,8 +47,11 @@ struct CustomCarouselView<Content: View, Item, ID>: View where Item: RandomAcces
                     let index = indexOf(item: movie)
                     
                     content(movie, CGSize(width: size.width - cardPadding, height: size.height))
+                    //MARK: - Rotation Effect
                         .rotationEffect(.init(degrees: Double(index) * 5), anchor: .bottom)
                         .rotationEffect(.init(degrees: rotation), anchor: .bottom)
+                    //MARK: - Moving Up
+                        .offset(y: offsetY(index: index, cardWidth: cardWidth))
                         .frame(width: size.width - cardPadding, height: size.height)
                         .contentShape(Rectangle())
                 }
@@ -72,6 +75,20 @@ struct CustomCarouselView<Content: View, Item, ID>: View where Item: RandomAcces
             lastStoredOffset = extraSpace
         }
         .animation(.easeInOut, value: translation == 0)
+    }
+    
+    //MARK: - Moving Current Item Up
+    func offsetY(index: Int, cardWidth: CGFloat) -> CGFloat {
+        //MARK: - Converting current translation, not whole offset
+        let progress = ((translation < 0 ? translation : -translation) / cardWidth) * 60
+        let yOffset = -progress < 60 ? progress : -(progress + 120)
+        
+        let previous = (index - 1) == self.index ? (translation < 0 ? yOffset : -yOffset) : 0
+        
+        let next = (index + 1) == self.index ? (translation < 0 ? -yOffset : yOffset) : 0
+        let inBetween = (index - 1) == self.index ? previous : next
+        
+        return index == self.index ? -60 - yOffset : inBetween
     }
     
     //MARK: - Item index

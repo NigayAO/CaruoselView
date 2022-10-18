@@ -18,6 +18,7 @@
 		1D88D31028FD96C900FDC7EE /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D88D30F28FD96C800FDC7EE /* CustomTabBarView.swift */; };
 		1D88D31228FD972900FDC7EE /* ItemsTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D88D31128FD972900FDC7EE /* ItemsTabBar.swift */; };
 		1D88D31528FD9B8C00FDC7EE /* CustomCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D88D31428FD9B8C00FDC7EE /* CustomCarouselView.swift */; };
+		1D88D31728FDE85D00FDC7EE /* VisibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D88D31628FDE85D00FDC7EE /* VisibleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		1D88D30F28FD96C800FDC7EE /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		1D88D31128FD972900FDC7EE /* ItemsTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTabBar.swift; sourceTree = "<group>"; };
 		1D88D31428FD9B8C00FDC7EE /* CustomCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCarouselView.swift; sourceTree = "<group>"; };
+		1D88D31628FDE85D00FDC7EE /* VisibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisibleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				1D88D30D28FD949D00FDC7EE /* CustomSearchBarView.swift */,
 				1D88D30F28FD96C800FDC7EE /* CustomTabBarView.swift */,
 				1D88D31428FD9B8C00FDC7EE /* CustomCarouselView.swift */,
+				1D88D31628FDE85D00FDC7EE /* VisibleView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				1D88D2F928FD8B5300FDC7EE /* ContentView.swift in Sources */,
 				1D88D2F728FD8B5300FDC7EE /* CaruoselViewApp.swift in Sources */,
 				1D88D31228FD972900FDC7EE /* ItemsTabBar.swift in Sources */,
+				1D88D31728FDE85D00FDC7EE /* VisibleView.swift in Sources */,
 				1D88D31028FD96C900FDC7EE /* CustomTabBarView.swift in Sources */,
 				1D88D30828FD904C00FDC7EE /* Home.swift in Sources */,
 				1D88D30C28FD928100FDC7EE /* HeaderView.swift in Sources */,
